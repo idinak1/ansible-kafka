@@ -1,5 +1,0 @@
-- name: Kafka Kurulumu
-  hosts: kafka_nodes
-  become: yes
-  roles:
-    - role: .
