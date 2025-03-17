@@ -1,0 +1,11 @@
+- name: Kafka Kurulumu
+  hosts: kafka_nodes
+  become: yes
+  tasks:
+    - name: Include task list in play
+      ansible.builtin.include_tasks:
+        file: tasks/main.yml
+  handlers:
+    - import_tasks: handlers/main.yml
+  vars_files:
+    - vars/main.yml
